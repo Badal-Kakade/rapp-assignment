@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background: #c7fbff7a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  .form_ui{
+    width: 60%;
+    margin: auto;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    .inputbx{
+      width: 85%;
+      margin: 0.5em;
+      background: #fcfcfc;
+      label{
+        line-height: 1em;
+      }
+      input{
+        padding: 7.5px 10px;
+      }
+    }
+    .sub_btn_sec{
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 1.5em;
+      .button_submit{
+        background: #04728e;
+        color: #fff;
+      }
+    }
+  }
+}
