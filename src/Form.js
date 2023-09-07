@@ -22,9 +22,13 @@ const Form = () => {
         const newErrors = {};
         if (!formData.firstName) {
           newErrors.firstName = 'First Name is required';
+        } else if(!/^[A-Za-z\s]+$/.test(formData.firstName)){
+            newErrors.firstName = 'First Name is no Valid';
         }
         if (!formData.lastName) {
           newErrors.lastName = 'Last Name is required';
+        } else if(!/^[A-Za-z\s]+$/.test(formData.lastName)){
+            newErrors.lastName = 'Last Name is not Valid';
         }
         if (!formData.address) {
           newErrors.address = 'Address is required';
