@@ -40,7 +40,7 @@ const Form = () => {
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-        localStorage.setItem('all_data', JSON.stringify(formData));
+        localStorage.setItem('formData', JSON.stringify(formData));
         if (validateForm()){
             try {
                 const newItem = {
@@ -48,15 +48,16 @@ const Form = () => {
                 };
                 await axios.post('http://localhost:5000/items', newItem); //http://localhost:5000/items its a dummy server URL
                 alert('Item created successfully!');
-                setFormData({
-                    firstName: '',
-                    lastName: '',
-                    address: '',
-                    email: '',
-                  })
+                
               } catch (error) {
                 console.error('Error creating item:', error);
               }
+              setFormData({
+                firstName: '',
+                lastName: '',
+                address: '',
+                email: '',
+              })
         }
       };
   return (
